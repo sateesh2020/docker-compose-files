@@ -2,10 +2,13 @@ Docker Compose Files
 ===
 Some typical docker compose examples.
 
-# Install Docker and Docker Compose
-Take ubuntu for example
+If you're not familiar with Docker, can have a look at these books (in CN):
 
-```sh
+* [Docker Practice](https://github.com/yeasy/docker_practice)
+
+# Install Docker&Docker Compose
+
+```bash
 $ curl -sSL https://get.docker.com/ | sh
 $ sudo pip install docker-compose
 ```
@@ -19,6 +22,13 @@ See [Docker Compose Documentation](https://docs.docker.com/compose/).
 ## [consul-discovery](consul-discovery)
 Using consul to make a service-discoverable architecture.
 
+## [discuz_php_apache_mysql](discuz_php_apache_mysql)
+Discuz with apache and mysql.
+
+## [elk](elk)
+ELK example.
+
+
 ## [elk_netflow](elk_netflow)
 Elk cluster, with netflow support.
 ```sh
@@ -28,10 +38,18 @@ docker-compose scale es=3
 ## [haproxy_web](haproxy_web)
 A simple haproxy and web applications cluster.
 
-## [hyperledger](hyperledger)
-Quickly bootup a hyperledger cluster with several validator nodes, without vagrant or any manual configuration. By default, the cluster enables PBFT as the consensus.
+## [hyperledger_fabric](hyperledger_fabric)
+Quickly bootup a hyperledger fabric cluster with several validator nodes, without vagrant or any manual configuration.
 
-See [hyperledger](hyperledger) for more details.
+Now we support from v0.6 to v1.0.x.
+
+See [hyperledger_fabric](hyperledger_fabric) for more details.
+
+## [kafka](kafka)
+Start a simple kafka service for testing.
+
+## [lnmp_wordpress](lnmp_wordress)
+Deploy nginx, mysql, php + wordpress.
 
 ## [mongo_cluster](mongo_cluster)
 Start 3 mongo instance to make a replica set.
@@ -49,7 +67,7 @@ The web UI will listen on local 8081 port.
 ## [nginx_auth](nginx_auth)
 Use nginx as a proxy with authentication for backend application.
 
-## [packetbeat_ek](packetbeat_ek)
+## [packetbeat_elk](packetbeat_elk)
 Demo the packetbeat, elasticsearch and kibana.
 
 Some kibana [dashboard config](https://github.com/elastic/beats-dashboards) files are included.
@@ -58,6 +76,9 @@ To import them, after all containers startup, go inside the kibana container, an
 ```sh
 $ cd /kibana/beats-dashboards-1.0.1 && ./load.sh http://elasticsearch:9200
 ```
+
+## [redis](redis)
+A redis serer and a redis client (send a PING to the server).
 
 ## [registry_mirror](registry_mirror)
 docker registry mirror, with redis as the backend cache.
